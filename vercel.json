@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "api",
+  "builds": [
+    {
+      "src": "/src/api/handler/index.go",
+      "use": "@vercel/go"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api(.*)",
+      "dest": "/src/api/handler/"
+    }
+  ]
+}
